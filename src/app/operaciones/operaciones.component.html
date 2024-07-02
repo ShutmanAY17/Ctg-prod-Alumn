@@ -1,0 +1,24 @@
+<div class="mt-3"></div>
+<div class="containter">
+  <div class="card border-primary text-primary text-center">
+    <div class="card-header text-center">
+        <h1 class="card-title text-center text-primary">
+            Titulo
+        </h1>
+    </div>
+    <div class="card-body text-primary">
+        <form>
+            <div class="mb-3">
+              <label for="txtCentigrados" class="form-label">Grados Centigrados</label>
+              <input type="number" class="form-control" id="txtCentigrados" aria-describedby="emailHelp"
+              name="grados"
+              {{ngModel}}="grados">
+            </div>
+            <button type="button" class="btn btn-primary" (click)="convertir()">Convertir a farenheit</button>
+          </form>
+          <label for="" class="form-label text-danger">
+            El resultado es {{resultado}}
+          </label>
+    </div>
+  </div>
+</div>
