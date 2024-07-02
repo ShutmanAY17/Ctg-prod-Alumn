@@ -1,0 +1,38 @@
+<div class="mt-3">
+    <div class="container">
+        <div class="card border-primary text-center">
+            <div class="card-header text-primary">
+                <h1 class="card-title text-center text-primary">
+                    {{titulo}}
+                </h1>
+            </div>
+            <div class="card-body text-primary border-primary">
+                <table class="table table-striped">
+                    <thead>
+                        <th>ID Alumno</th>
+                        <th>Nombre</th>
+                        <th>Apellido paterno</th>
+                        <th>Apellido materno</th>
+                        <th>E-mail</th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let a of listadoAlumnos">
+                            <td>{{a.idAlumno}}</td>
+                            <td>{{a.nombre}}</td>
+                            <td>{{a.paterno}}</td>
+                            <td>{{a.materno}}</td>
+                            <td>{{a.email}}</td>
+                            <td>
+                                <button class="btn btn-outline-success btn-sm" (click)="update(a.idAlumno)">Actualizar</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-outline-danger btn-sm" (click)="eliminar(a.idAlumno)">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn-outline-primary btn-sm" (click)="create()">Agregar</button>
+            </div>
+        </div>
+    </div>
+</div>

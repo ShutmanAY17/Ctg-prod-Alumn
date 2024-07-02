@@ -5,6 +5,8 @@ import { CategoriasComponent } from './categorias/categorias.component';
 import { ProductosComponent } from './productos/productos.component';
 import { CategoriaFormComponent } from './categoria-form/categoria-form.component';
 import { ProductosFormComponent } from './productos-form/productos-form.component';
+import { AlumnoFormComponent } from './alumno-form/alumno-form.component';
+import { AlumnosComponent } from './alumnos/alumnos.component';
 
 export const routes: Routes = [
     {
@@ -35,6 +37,15 @@ export const routes: Routes = [
     },
     {
         path:'form-productos', component: ProductosFormComponent
+    },
+    {
+        path:'alumnos-form/:id', component: AlumnoFormComponent
+    },
+    {
+        path:'alumnos-form', component: AlumnoFormComponent
+    },
+    {
+        path:'alumnos', component: AlumnosComponent
     }
     
 ];
